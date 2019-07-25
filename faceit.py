@@ -21,7 +21,7 @@ from scripts.extract import Extract
 from scripts.train import Train
 from scripts.convert import Convert
 from lib.faces_detect import DetectedFace
-from plugins.plagin_loader import PluginLoader
+from plugins.plugin_loader import PluginLoader
 from lib.face_filter import FaceFilter
 
 class FaceIt:
