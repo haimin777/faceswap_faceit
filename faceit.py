@@ -16,13 +16,13 @@ from pathlib import Path
 import sys
 sys.path.append('faceswap')
 
-from faceswap.lib.utils import FullHelpArgumentParser
+#from faceswap.lib.utils import FullHelpArgumentParser
 from scripts.extract import ExtractTrainingData
 from scripts.train import TrainingProcessor
 from scripts.convert import ConvertImage
 from lib.faces_detect import detect_faces
 from plugins.PluginLoader import PluginLoader
-from faceswap.lib.FaceFilter import FaceFilter
+from faceswap.lib.face_filter import FaceFilter
 
 class FaceIt:
     VIDEO_PATH = 'data/videos'
