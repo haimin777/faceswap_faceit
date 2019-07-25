@@ -19,9 +19,9 @@ sys.path.append('faceswap')
 #from faceswap.lib.utils import FullHelpArgumentParser
 from scripts.extract import Extract
 from scripts.train import Train
-from scripts.convert import ConvertImage
+from scripts.convert import Convert
 from lib.faces_detect import detect_faces
-from plugins.PluginLoader import PluginLoader
+from plugins.plagin_loader import PluginLoader
 from lib.face_filter import FaceFilter
 
 class FaceIt:
