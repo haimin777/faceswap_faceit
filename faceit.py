@@ -20,7 +20,7 @@ sys.path.append('faceswap')
 from scripts.extract import Extract
 from scripts.train import Train
 from scripts.convert import Convert
-from lib.faces_detect import detect_faces
+from lib.faces_detect import DetectedFace
 from plugins.plagin_loader import PluginLoader
 from lib.face_filter import FaceFilter
 
@@ -234,7 +234,7 @@ class FaceIt:
         def _convert_frame(frame, convert_colors = True):
             if convert_colors:
                 frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB) # Swap RGB to BGR to work with OpenCV
-            for face in detect_faces(frame, "cnn"):
+            for face in DetectedFace(frame, "cnn"):
                 if (not face_filter) or (face_filter and filter.check(face)):
                     frame = converter.patch_image(frame, face)
                     frame = frame.astype(numpy.float32)
